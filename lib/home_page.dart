@@ -16,11 +16,16 @@ class HomeState extends State<HomePage> {
           child: Text("Home Page"),
         ),
       ),
-      body: Center(
-        child: Text(
-          "Hello World",
-          style: TextStyle(fontSize: 36),
-        ),
+      body: Container(
+        height: 300,
+        width: 300,
+        color: Colors.white,
+        child: Center(
+            child: Container(
+          height: 100,
+          width: 100,
+          color: Colors.green,
+        )),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
