@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/app_controller.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,22 +17,19 @@ class HomeState extends State<HomePage> {
           child: Text("Home Page"),
         ),
       ),
-      body: Container(
-        height: 300,
-        width: 300,
-        color: Colors.white,
-        child: Center(
-            child: Container(
-          height: 100,
-          width: 100,
-          color: Colors.green,
-        )),
+      body: Center(
+        child: Switch(
+          value: AppController.instance.darkTheme,
+          onChanged: (value) {
+            AppController.instance.changeTheme();
+          },
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
           setState(() {
-            print("Hel lo World");
+            print("Hello World");
           });
         },
       ),
