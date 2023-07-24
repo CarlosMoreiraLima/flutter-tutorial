@@ -20,8 +20,18 @@ class HomeState extends State<HomePage> {
           child: Text("Home Page"),
         ),
       ),
-      body: Center(
-        child: CustomSwitch(),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Column(
+          children: [
+            Text(
+              "Counter: ",
+              style: TextStyle(fontSize: 36),
+            ),
+            CustomSwitch()
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
