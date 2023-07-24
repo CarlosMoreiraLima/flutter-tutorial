@@ -23,13 +23,38 @@ class HomeState extends State<HomePage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
               "Counter: ",
               style: TextStyle(fontSize: 36),
             ),
-            CustomSwitch()
+            CustomSwitch(),
+            Row(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              // mainAxisAlignment: MainAxisAlignment.end,
+              // mainAxisAlignment: MainAxisAlignment.spaceAround,
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.black,
+                ),
+                Container(
+                  height: 50,
+                  width: 50,
+                  color: Colors.black,
+                ),
+              ],
+            ),
           ],
         ),
       ),
