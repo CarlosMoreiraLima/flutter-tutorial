@@ -23,7 +23,7 @@ class HomeState extends State<HomePage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        child: Column(
+        child: Row(
           children: [
             Text(
               "Counter: ",
