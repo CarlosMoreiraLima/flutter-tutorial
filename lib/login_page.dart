@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   print("Email: $usermail \nPassword: $password");
 
-                  Navigator.of(context).push(
+                  Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => HomePage()),
                   );
                 },
