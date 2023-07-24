@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:my_app/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -47,13 +48,17 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  print("Email: $usermail \nPassword: $password");
-                },
                 child: Text("Entrar"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
                 ),
+                onPressed: () {
+                  print("Email: $usermail \nPassword: $password");
+
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
               ),
             ],
           ),
