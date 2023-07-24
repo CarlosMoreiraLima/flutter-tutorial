@@ -25,6 +25,19 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                height: 150,
+                width: 150,
+                decoration: BoxDecoration(
+                    border: Border.all(width: 5, color: Colors.greenAccent),
+                    borderRadius: BorderRadius.circular(100)),
+                child: Image.network(
+                  "https://tinder.com/static/tinder.png",
+                ),
+              ),
+              Container(
+                height: 25,
+              ),
               TextField(
                 keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
@@ -54,7 +67,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 onPressed: () {
                   print("Email: $usermail \nPassword: $password");
-                  Navigator.of(context).pushNamed('/home');
+                  Navigator.of(context).pushReplacementNamed('/home');
                 },
               ),
             ],
