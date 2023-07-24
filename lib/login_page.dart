@@ -1,7 +1,4 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
-import 'package:my_app/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,14 +22,12 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: 150,
-                width: 150,
-                decoration: BoxDecoration(
-                    border: Border.all(width: 5, color: Colors.greenAccent),
-                    borderRadius: BorderRadius.circular(100)),
-                child: Image.network(
-                  "https://tinder.com/static/tinder.png",
+              ClipRRect(
+                borderRadius: BorderRadius.circular(30.0),
+                child: Image.asset(
+                  "assets/images/tinder.png",
+                  height: 150.0,
+                  width: 150.0,
                 ),
               ),
               Container(
