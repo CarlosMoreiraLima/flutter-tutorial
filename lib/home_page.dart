@@ -23,20 +23,41 @@ class HomeState extends State<HomePage> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          // scrollDirection: Axis.vertical,
           children: [
             Text(
               "Counter: ",
               style: TextStyle(fontSize: 36),
             ),
             CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
+            CustomSwitch(),
+            Container(height: 30),
             Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.end,
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
                   height: 50,
