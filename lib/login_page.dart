@@ -29,58 +29,68 @@ class _LoginPageState extends State<LoginPage> {
             Container(
               height: 50,
             ),
-            TextField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(55),
-                  borderSide: BorderSide(
-                    width: 1,
-                    color: Colors.white,
-                  ),
-                ),
-                label: Text(
-                  "Email",
-                  style: TextStyle(color: Colors.white),
+            Card(
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20, left: 12, right: 12),
+                child: Column(
+                  children: [
+                    TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(55),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.white,
+                          ),
+                        ),
+                        label: Text(
+                          "Email",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      onChanged: (text) {
+                        usermail = text;
+                      },
+                    ),
+                    Container(height: 15),
+                    TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(55),
+                          borderSide: BorderSide(
+                            width: 1,
+                            color: Colors.white,
+                          ),
+                        ),
+                        fillColor: Colors.white,
+                        label: Text(
+                          "Password",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      style: TextStyle(color: Colors.white, fontSize: 24),
+                      onChanged: (text) {
+                        password = text;
+                      },
+                    ),
+                    Container(height: 20),
+                    ElevatedButton(
+                      child: Text("Entrar"),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                      ),
+                      onPressed: () {
+                        print("Email: $usermail \nPassword: $password");
+                        Navigator.of(context).pushReplacementNamed('/home');
+                      },
+                    ),
+                  ],
                 ),
               ),
-              style: TextStyle(color: Colors.white, fontSize: 24),
-              onChanged: (text) {
-                usermail = text;
-              },
-            ),
-            Container(height: 15),
-            TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(55),
-                  borderSide: BorderSide(
-                    width: 1,
-                    color: Colors.white,
-                  ),
-                ),
-                fillColor: Colors.white,
-                label: Text(
-                  "Password",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-              style: TextStyle(color: Colors.white, fontSize: 24),
-              onChanged: (text) {
-                password = text;
-              },
-            ),
-            Container(height: 20),
-            ElevatedButton(
-              child: Text("Entrar"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
-              ),
-              onPressed: () {
-                print("Email: $usermail \nPassword: $password");
-                Navigator.of(context).pushReplacementNamed('/home');
-              },
             ),
           ],
         ),
