@@ -12,81 +12,67 @@ class HomeState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: [
+            UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.grey[900]),
+              currentAccountPicture: ClipOval(
+                child: Image.asset(
+                  "assets/images/shiftpower.webp",
+                ),
+              ),
+              accountName: Text(
+                "Carlos Henrique Moreira",
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+              accountEmail: Text("chmlima201@gmail.com"),
+            ),
+            ListTile(
+              leading: Icon(Icons.home, color: Colors.blue),
+              title: Text("Inicio", style: TextStyle(fontSize: 18)),
+              subtitle: Text("Tela de inicio"),
+              onTap: () {
+                print("Hello");
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.exit_to_app,
+                color: Colors.grey,
+              ),
+              title: Text("Sair", style: TextStyle(fontSize: 18)),
+              subtitle: Text("Encerrar sessão"),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed("/");
+              },
+            ),
+          ],
+        ),
+      ),
       appBar: AppBar(
         actions: [
           CustomSwitch(),
         ],
-        title: Center(
+        title: const Center(
           child: Text("Home Page"),
         ),
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          // scrollDirection: Axis.vertical,
-          children: [
-            Text(
-              "Counter: ",
-              style: TextStyle(fontSize: 36),
-            ),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            CustomSwitch(),
-            Container(height: 30),
-            Row(
-              children: [
-                Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.black,
-                ),
-                Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.black,
-                ),
-                Container(
-                  height: 50,
-                  width: 50,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-          ],
-        ),
+        child: null,
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
         backgroundColor: Colors.pink,
         onPressed: () {
           setState(() {
             print("Hello World");
           });
         },
+        child: const Icon(Icons.add),
       ),
     );
   }

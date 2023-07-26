@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           theme: ThemeData(
-            primarySwatch: Colors.green,
+            primarySwatch: Colors.red,
             brightness: AppController.instance.darkTheme ? Brightness.dark : Brightness.light,
           ),
           routes: {
