@@ -1,6 +1,6 @@
 # my_app
 
-A new Flutter project.
+A simple Flutter project to learning basic concepts.
 
 ## Getting Started
 
